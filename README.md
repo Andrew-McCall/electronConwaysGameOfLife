@@ -1,1 +1,1 @@
-# electronConwaysGameOfLife
+# Electron - Conway's Game Of Life
