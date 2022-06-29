@@ -18,6 +18,7 @@ Conway's game of life is a classic computer science challange. It's a simulation
 - Slider for pixel size
 - Slider for board size
 - Slider for scramble chance (Currently 30%)
+- Colour based of neighour count
 - Draw on mouse down (Currently Click)
 - Wiki page iframe
 - Polished Html

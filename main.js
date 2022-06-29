@@ -10,7 +10,9 @@ app.whenReady().then( () => {
             nodeIntegration:true,
             contextIsolation: false,
             nodeIntegrationInWorker: true
-        }
+        },
+        icon: __dirname + '/Gol.ico',
+        title:"Loading"
     });
 
     mainWindow.loadFile('home.html')

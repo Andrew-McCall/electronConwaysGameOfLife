@@ -13,7 +13,7 @@ timer.oninput = () => {
 }
 
 
-const SIZE = 48
+const SIZE = 50
 const SCALE = 10
 
 let calculate = false;
