@@ -8,6 +8,7 @@ app.whenReady().then( () => {
         autoHideMenuBar: true,
         webPreferences:{
             nodeIntegration:true
+            
         }
     });
 

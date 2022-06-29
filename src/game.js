@@ -2,7 +2,17 @@ const play = document.getElementById("play")
 const scamble = document.getElementById("scramble")
 const canvas = document.getElementById('canvas');
 const para = document.getElementById('data');
+const timer = document.getElementById("timer")
+const timerLabel = document.getElementById("timeoutLabel")
 const ctx = canvas.getContext('2d');
+
+var timerCountdown = 0;
+
+timerLabel.innerHTML = timer.value
+timer.oninput = () => {
+    timerLabel.innerHTML = timer.value
+}
+
 
 const SIZE = 25
 const SCALE = 10
@@ -14,8 +24,10 @@ canvas.width = SIZE*SCALE*1
 
 let boardData = new Array(SIZE*SIZE).fill(0);
 
-setInterval(function(){
-    if (calculate){
+setInterval(() => {
+    timerCountdown+=50
+    if (calculate && timer.value<timerCountdown){
+        timerCountdown=0
         boardDataNext = new Array(SIZE*SIZE).fill(0);
         for(let x = 0; x < SIZE; x++){
             for(let y = 0; y < SIZE; y++){
@@ -31,7 +43,9 @@ setInterval(function(){
         boardData = boardDataNext
         updateScreen()
     }
-}, 750);
+    
+}, 50);
+
 
 function updateScreen (){
     para.innerText = boardData;
@@ -55,7 +69,7 @@ function neighbours (x, y, callback) {
     let count = 0
     for (let dx = -1; dx < 2; dx++){
         for (let dy = -1; dy < 2; dy++){
-            if (dy === 0 && dx === 0)continue;
+            if (dy == dx)continue;
             if (1 === boardData[((x+dx)%SIZE)*SIZE+(y+dy)%SIZE]){
                 count++;
             }
