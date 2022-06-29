@@ -69,8 +69,8 @@ function neighbours (x, y, callback) {
     let count = 0
     for (let dx = -1; dx < 2; dx++){
         for (let dy = -1; dy < 2; dy++){
-            if (dy == dx)continue;
-            if (1 === boardData[((x+dx)%SIZE)*SIZE+(y+dy)%SIZE]){
+            if (dy === 0 && 0 === dx)continue;
+            if (1 === boardData[((x+dx)%SIZE)*SIZE +((y+dy)%SIZE)]){
                 count++;
             }
         }
