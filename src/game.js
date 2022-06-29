@@ -1,7 +1,6 @@
 const play = document.getElementById("play")
 const scamble = document.getElementById("scramble")
 const canvas = document.getElementById('canvas');
-const para = document.getElementById('data');
 const timer = document.getElementById("timer")
 const timerLabel = document.getElementById("timeoutLabel")
 const ctx = canvas.getContext('2d');
@@ -14,7 +13,7 @@ timer.oninput = () => {
 }
 
 
-const SIZE = 25
+const SIZE = 48
 const SCALE = 10
 
 let calculate = false;
@@ -48,7 +47,6 @@ setInterval(() => {
 
 
 function updateScreen (){
-    para.innerText = boardData;
     for(let x = 0; x < SIZE; x++){
         for(let y = 0; y < SIZE; y++){
             
@@ -105,5 +103,4 @@ canvas.addEventListener('mousedown', e => {
     const y = Math.floor((e.clientY - rect.top)/SCALE)%SIZE
     boardData[x*SIZE+y] = (boardData[x*SIZE+y] === 1)?0:1;
     updateScreen()
-    neighbours(x,y, console.log)
 })

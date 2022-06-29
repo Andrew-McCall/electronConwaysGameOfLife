@@ -10,25 +10,28 @@
         canvas{
                 background-color: lightgray;
             }
+        body {
+        overflow: hidden; 
+        }
     </style> 
 </head>
 <body>
     
-    <h1>Main</h1>
+    <!-- <h1>Main</h1>
     
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, cumque iste dolorem quaerat et aut molestias doloribus laboriosam tempore vel neque non in reiciendis exercitationem. Officia et ea delectus ipsa?
    
-    <br/><br/>
+    <br/><br/> -->
     <button id="play">Play</button> <button id="scramble">Scramble</button>   
 
     <br/><br/>
-    <canvas id="canvas" height="200px", width="200px"></canvas>
+    <canvas id="canvas"></canvas>
 
     <br/>
-    <input type="range" id="timer" min="50" max="2000" value="500" step="50">
+    <label for="timer">Delay </label><input type="range" id="timer" min="50" max="2000" value="500" step="50">
     <label id="timeoutLabel" for="timer">500</label>
 
-    <p id="data"></p>
+    <p>By Andrew McCall</p>
 
 </body>
 </html>
