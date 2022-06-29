@@ -12,7 +12,11 @@ Conway's game of life is a classic computer science challange. It's a simulation
 - html & js
 
 ## Images
-![Gif Of App](https://i.imgur.com/KQMGtkr.gif)
+Gif Of Features
+![Gif Of App](https://i.imgur.com/HenksRG.gif)
+
+Full Frame - Taskbar Icon
+![Desktop App with icon](https://i.imgur.com/g4zawl5.png)
 
 ## Future Improvements
 - Slider for pixel size
