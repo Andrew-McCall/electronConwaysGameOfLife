@@ -17,7 +17,15 @@ Gif Of Features
 
 Full Frame - Taskbar Icon  
 ![Desktop App with icon](https://i.imgur.com/g4zawl5.png)
-
+ 
+## Download Package
+Releases on github are limited to 25mb.
+[Google Drive Download](https://drive.google.com/file/d/1pGyjuGQMsQzM4A6oad8FraNL7MvKdT65/view?usp=sharing)
+Unzip file then run "Conway'sGameOfLife.exe"
+  
+*Don't trust random .exe from the web*
+ 
+ 
 ## Future Improvements
 - Slider for pixel size
 - Slider for board size
