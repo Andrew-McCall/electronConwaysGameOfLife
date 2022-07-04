@@ -20,7 +20,7 @@ Full Frame - Taskbar Icon
  
 ## Download Package
 Releases on github are limited to 25mb.
-[Google Drive Download](https://drive.google.com/file/d/1pGyjuGQMsQzM4A6oad8FraNL7MvKdT65/view?usp=sharing)
+[Packaged Zip Download](https://github.com/Andrew-McCall/electronConwaysGameOfLife/blob/main/GameOfLife.zip)
 Unzip file, then run "GameOfLife.exe" in the folder.
   
 *Don't trust random .exe from the web*
