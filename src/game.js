@@ -97,10 +97,28 @@ scamble.onclick = () => {
     updateScreen()
 }
 
+let isMouseDown = false;
+
 canvas.addEventListener('mousedown', e => {
-    const rect = canvas.getBoundingClientRect()
-    const x = Math.floor((e.clientX - rect.left)/SCALE)%SIZE
-    const y = Math.floor((e.clientY - rect.top)/SCALE)%SIZE
-    boardData[x*SIZE+y] = (boardData[x*SIZE+y] === 1)?0:1;
+    isMouseDown = true;
+    const x = Math.floor((e.x - rect.left)/SCALE)%SIZE
+    const y = Math.floor((e.y - rect.top)/SCALE)%SIZE +2
+    boardData[x*SIZE+y] = 1;
     updateScreen()
 })
+
+canvas.addEventListener("mouseup", e => {
+    isMouseDown = false;
+})
+
+const rect = canvas.getBoundingClientRect()
+
+document.addEventListener("mousemove", e=>{
+    if (isMouseDown){
+        const x = Math.floor((e.x - rect.left)/SCALE)%SIZE
+        const y = Math.floor((e.y - rect.top)/SCALE)%SIZE +2
+        boardData[x*SIZE+y] = 1;
+        updateScreen()
+    }
+})
+
