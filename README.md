@@ -21,7 +21,7 @@ Full Frame - Taskbar Icon
 ## Download Package
 Releases on github are limited to 25mb.
 [Google Drive Download](https://drive.google.com/file/d/1pGyjuGQMsQzM4A6oad8FraNL7MvKdT65/view?usp=sharing)
-Unzip file then run "GameOfLife.exe"
+Unzip file, then run "GameOfLife.exe" in the folder.
   
 *Don't trust random .exe from the web*
  
