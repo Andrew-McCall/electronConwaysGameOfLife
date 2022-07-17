@@ -13,8 +13,8 @@ timer.oninput = () => {
 }
 
 
-const SIZE = 50
-const SCALE = 10
+const SIZE = 100
+const SCALE = 5
 
 let calculate = false;
 
@@ -102,7 +102,7 @@ let isMouseDown = false;
 canvas.addEventListener('mousedown', e => {
     isMouseDown = true;
     const x = Math.floor((e.x - rect.left)/SCALE)%SIZE
-    const y = Math.floor((e.y - rect.top)/SCALE)%SIZE +2
+    const y = Math.floor((e.y - rect.top)/SCALE)%SIZE
     boardData[x*SIZE+y] = 1;
     updateScreen()
 })
@@ -116,7 +116,7 @@ const rect = canvas.getBoundingClientRect()
 document.addEventListener("mousemove", e=>{
     if (isMouseDown){
         const x = Math.floor((e.x - rect.left)/SCALE)%SIZE
-        const y = Math.floor((e.y - rect.top)/SCALE)%SIZE +2
+        const y = Math.floor((e.y - rect.top)/SCALE)%SIZE
         boardData[x*SIZE+y] = 1;
         updateScreen()
     }
